@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scientific Calculator with Voice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button onclick="clearDisplay()" class="clear">AC</button>
+      <button onclick="backspace()" class="clear">⌫</button>
+      <button onclick="append('%')" class="operator">%</button>
+      <button onclick="append('/')" class="operator">÷</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')" class="operator">×</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')" class="operator">−</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')" class="operator">+</button>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="append('**2')">x²</button>
+      <button onclick="calculate()" class="equals">=</button>
+
+      <button onclick="scientific('sqrt')">√</button>
+      <button onclick="scientific('sin')">sin</button>
+      <button onclick="scientific('cos')">cos</button>
+      <button onclick="scientific('tan')">tan</button>
+
+      <button onclick="scientific('log')">log</button>
+      <button onclick="insertConstant('pi')">π</button>
+      <button onclick="insertConstant('e')">e</button>
+      <button onclick="toggleMode()" class="mode">Dark/Light</button>
+
+      <button onclick="startListening()" class="voice">🎤 Speak</button>
+      <button onclick="downloadHistory()" class="download">Download History</button>
+    </div>
+  </div>
+
+  <div class="history" id="history">
+    <h3>History</h3>
+  </div>
+
+  <audio id="click-sound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
